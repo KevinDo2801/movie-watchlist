@@ -1,0 +1,288 @@
+/* Setting */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    padding: 0;
+    margin: 0;
+    font-size: 1.125rem;
+    font-weight: 300;
+    line-height: 1.6;
+    background: #1C1C1C;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 570px;
+    background-color: white;
+}
+
+.image-full {
+    max-height: 300px;
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 2em;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+h1,
+h2,
+h3 {
+    margin: 0;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+}
+
+p {
+    font-weight: 400;
+    margin: 0;
+    margin-top: 0.5em;
+    line-height: 1.4;
+}
+
+.strong {
+    font-weight: 400;
+}
+
+.less-strong {
+    font-weight: 600;
+}
+
+.mag-side {
+    padding: .5em;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* header */
+header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem 2rem;
+    background: url("./header_bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 30%;
+    margin-bottom: 2rem;
+}
+
+header::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+header h1,
+header a {
+    color: white;
+    z-index: 10;
+}
+
+header h1 {
+    font-size: 2.67469rem;
+    font-weight: 800;
+}
+
+header p {
+    font-size: 0.875rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all .3s;
+    border: 1px solid transparent;
+    border-radius: 70%;
+}
+
+header p:hover {
+    background-color: rgb(88, 99, 96);
+}
+
+/* Search bar */
+.search {
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+    padding: .1em;
+    display: grid;
+    grid-template-columns: 2em 70% auto;
+    border: 1px solid #9CA3AF;
+    width: 90%;
+    margin: 0 auto;
+    position: absolute;
+    bottom: -17px;
+    z-index: 10;
+
+    color: #6B7280;
+}
+
+.search i {
+    padding: .3em;
+}
+
+.search input {
+    border: none;
+    outline: none;
+    font-size: 1rem;
+}
+
+.search input::placeholder {
+    color: #C3C3C3;
+}
+
+.search button {
+    color: #374151;
+    background-color: white;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: all .5s;
+
+    border: none;
+    border-left: 1px solid #9CA3AF;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.search button:hover {
+    color: rgb(255, 255, 255);
+    background-color: rgb(88, 99, 96);
+}
+
+/* main */
+main {
+    min-height: 80vh;
+}
+
+.default {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    color: #DFDDDD;
+    padding: 0 8rem;
+    text-align: center;
+}
+
+.default i {
+    font-size: 7rem;
+}
+
+.default {
+    font-weight: 700;
+}
+
+.exploring .section {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+    padding: 1rem 0;
+}
+
+.exploring .section:not(:last-child) {
+    border-bottom: 1px solid #E5E7EB;
+}
+
+.exploring .section .image {
+    cursor: pointer;
+}
+
+.exploring .section img {
+    cursor: pointer;
+    width: 100px;
+}
+
+.information-movie .title {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    cursor: pointer;
+}
+
+.information-movie .title h3 {
+    font-size: 1.125rem;
+    font-weight: 500;
+}
+
+.information-movie .title i {
+    font-size: .7rem;
+    color: #FEC654;
+}
+
+.information-movie .title span {
+    color: #111827;
+    font-size: 0.75rem;
+    font-weight: 400;
+}
+
+.information-movie .middle {
+    display: flex;
+    gap: 2rem;
+
+    color: #111827;
+    font-size: 0.75rem;
+    font-weight: 400;
+}
+
+.information-movie .middle p:last-of-type {
+    transition: all .3s;
+    border: 1px solid transparent;
+    border-radius: 70%;
+    cursor: pointer;
+}
+
+
+.information-movie .middle p:last-of-type:hover {
+    background-color: rgb(246, 255, 67);
+}
+
+.information-movie .descriptive {
+    color: #6B7280;
+    font-size: 0.875rem;
+    font-weight: 400;
+}
+
+.information-movie .descriptive span {
+    font-weight: 700;
+    cursor: pointer;
+}
+
+
+/* my watch list */
+.my-watch-list {
+    padding: 0 7rem;
+}
+
+.my-watch-list i{
+    font-size: 0.875rem;
+}
+
+.my-watch-list a p{
+    color: #363636;
+    font-size: 0.875rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all .3s;
+    border: 1px solid transparent;
+    border-radius: 70%;
+}
+
+.my-watch-list a p:hover{
+    background-color: rgb(246, 255, 67);
+}
